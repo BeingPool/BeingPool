@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="board">
+        <div id="squareOne"></div>
+        <div id="squareTwo"></div>
+        <div id="squareThree"></div>
+        <div id="squareFour"></div>
+        <div id="squareFive"></div>
+        <div id="squareSix"></div>
+        <div id="squareSeven"></div>
+        <div id="squareEight"></div>
+        <div id="squareNine"></div>
+      </div>
+      <div class="options">
+        <div class="playerNames">
+          <div class="playerNameContainer">
+            <div class="iconsContainer">
+              <i class="fa fa-chevron-up"></i>
+              <div class="icons">
+                <div class="asdf">
+                  <i class="fa fa-circle-o"></i>
+                  <i class="fa fa-times"></i>
+                </div>
+              </div>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+            <input id="playerOneName" type="text" name="playerOneName" placeholder="Player One">
+          </div>
+          <div class="playerNameContainer">
+            <div class="iconsContainer">
+              <i class="fa fa-chevron-up"></i>
+              <div class="icons">
+                <div class="asdf">
+                  <i class="fa fa-circle-o"></i>
+                  <i class="fa fa-times"></i>
+                </div>
+              </div>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+            <input id="playerTwoName" type="text" name="playerTwoName" placeholder="Player Two">
+          </div>
+        </div>
+        <div class="startStop">
+          <button id="play" type="button" name="Start">Play</button>
+        </div>
+      </div>
+      <div class="score">
+        <div class="players">
+          <h2>Player One &mdash; 0</h2>
+          <h2>Player Two &mdash; 0</h2>
+          <button id="reset" type="button" name="reset">Reset</button>
+          <button id="startOver" type="button" name="startOver">Start Over</button>
+          <button id="undo" type="button" name="undo">Undo</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
