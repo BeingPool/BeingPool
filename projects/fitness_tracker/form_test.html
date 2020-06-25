@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form Test</title>
+    <link rel="stylesheet" href="resources/css/sign_up_form_stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="sign_up_window">
+      <div class="sign_up_box">
+        <div class="image"></div>
+        <div class="information">
+          <div class="exit">
+            <i id="exit_button" class="fa fa-times"></i>
+          </div>
+          <div class="account_info">
+            <h3 class="accent">Account Information</h3>
+            <input type="text" name="email" value="Email">
+            <input type="text" name="username" value="Username">
+            <input type="text" name="password" value="Password">
+            <input type="text" name="confirm" value="Confirm">
+          </div>
+          <div class="personal_info">
+            <div class="height">
+              <h4 class="accent">Height</h4>
+                <div>
+                  <input type="number" name="feet" value="">
+                  <label for="feet">ft</label>
+                  <input type="number" name="inches" value="">
+                  <label for="inches">in</label>
+                </div>
+            </div>
+            <div class="weight">
+              <h4 class="accent">Weight</h4>
+              <div>
+                <input type="number" name="weight" value="">
+                <label for="weight">lbs</label>
+              </div>
+            </div>
+            <div class="age">
+              <h4 class="accent">Age</h4>
+              <div>
+                <input type="number" name="age" value="">
+                <label for="age">yrs</label>
+              </div>
+            </div>
+            <div class="gender">
+              <form class="checkbox_container">
+                <div class="male_container">
+                  <input class="toggle" type="checkbox" name="male" value="">
+                  <div class="male_visual">
+                    <h5>Male</h5>
+                  </div>
+                </div>
+                <div class="female_container">
+                  <input class="toggle" type="checkbox" name="female" value="">
+                  <div class="female_visual">
+                    <h5>Female</h5>
+                  </div>
+                </div>
+                <div class="other_container">
+                  <input class="toggle" type="checkbox" name="other" value="">
+                  <div class="other_visual">
+                    <h5>Other</h5>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="submit_button">
+            <button type="button" name="button">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

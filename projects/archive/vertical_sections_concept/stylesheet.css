@@ -1,0 +1,84 @@
+html {
+  font-size: 20px;
+}
+section {
+  display: flex;
+  width: 100%;
+  height: 774px;
+  border-bottom: 3px solid black;
+}
+body {
+  margin: 0;
+}
+.div {
+  box-sizing: border-box;
+  height: 100%;
+  flex-basis: 250px;
+  flex-grow: 1;
+  transition: flex-grow 1s ease 0s, flex-basis 2.5s ease-in-out 0s, justify-content 2.5s ease-in-out 0s;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.div:hover {
+  flex-grow: 4.5;
+}
+.div h1 {
+  font-family: 'russo one';
+  font-weight: 900;
+  opacity: 0.5;
+  transition: opacity 0.75s ease-out 0s, font-size 2.5s ease-in-out 0s;
+  font-size: 2.5rem;
+  padding-bottom: 30px;
+  color: white;
+  margin-top: 0;
+  cursor: pointer;
+}
+.div:hover h1 {
+  opacity: 1;
+}
+.div1 {
+  background-image: url('statue_of_liberty.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  border-right: 3px solid black;
+}
+.div2 {
+  background-image: url('great_wall_of_china.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  border-right: 3px solid black;
+}
+.div3 {
+  background-image: url('eiffel_tower.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  border-right: 3px solid black;
+}
+.div4 {
+  background-image: url('taj_mahal.jpg');
+  background-size: cover;
+  background-position: center bottom;
+  border-right: 3px solid black;
+}
+.div5 {
+  background-image: url('kremlin.jpg');
+  background-size: cover;
+  background-position: center bottom;
+}
+.div img {
+  height: 65px;
+  width: 65px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.div:hover img {
+  opacity: 1;
+  transition: opacity 0.75s linear 0s;
+}
+.div1 img, .div3 img {
+  height: 52px;
+  width: 52px;
+}

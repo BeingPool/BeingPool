@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+}
+section {
+  height: 100vh;
+  background-color: #0D0D0D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  height: 100px;
+  width: 300px;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s linear 0.9s;
+}
+span {
+  display: inline-block;
+  position: absolute;
+}
+.top {
+  background-image: linear-gradient(90deg, transparent, white);
+  top: 0;
+  left: -100%;
+  transition: left 0.4s linear 0s,
+              opacity 0s linear 0.4s;
+}
+.right {
+  background-image: linear-gradient(180deg, transparent, white);
+  top: -100%;
+  right: 0;
+  transition: top 0.2s linear 0.3s,
+              opacity 0s linear 0.5s;
+}
+.bottom {
+  background-image: linear-gradient(270deg, transparent, white);
+  bottom: 0;
+  right: -100%;
+  transition: right 0.4s linear 0.4s,
+              opacity 0s linear 0.8s;
+}
+.left {
+  background-image: linear-gradient(0deg, transparent, white);
+  left: 0;
+  bottom: -100%;
+  transition: bottom 0.2s linear 0.7s,
+              opacity 0s linear 0.9s;
+}
+.top, .bottom {
+  height: 2px;
+  width: 300px;
+}
+.left, .right {
+  width: 2px;
+  height: 100px;
+}
+a:hover .top {
+  left: 100%;
+  opacity: 0;
+}
+a:hover .right {
+  top: 100%;
+  opacity: 0;
+}
+a:hover .bottom {
+  right: 100%;
+  opacity: 0;
+}
+a:hover .left {
+  bottom: 100%;
+  opacity: 0;
+
+
+
+
+
+}
+a:hover {
+  box-shadow: 0px 0px 250px white;
+}

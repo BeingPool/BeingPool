@@ -1,0 +1,24 @@
+.gradient {
+  transition: all 0.25s linear 0s;
+}
+.main_image_two:hover .gradient, .main_image_three:hover .gradient, .main_image_four:hover .gradient {
+  opacity: 1;
+}
+.main_image_four .text_container_main_image i, .main_image_two .text_container_main_image i, .main_image_three .text_container_main_image i {
+  transition: all 0.1s ease 0s;
+}
+.main_image_four:hover .text_container_main_image i, .main_image_two:hover .text_container_main_image i, .main_image_three:hover .text_container_main_image i {
+  margin-right: 15px;
+}
+.button {
+  transition: all 0.05s linear 0s;
+}
+.button:hover {
+  box-shadow: 0px 0px 0px black;
+}
+.section_two div {
+  opacity: 0;
+  position: relative;
+  top: 75px;
+  transition: all 0.5s ease-out 0s;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Square</title>
+    <link href="resources/css/square_stylesheet.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="content">
+      <div class="title_container">
+        <h1>Base Number Conversion</h1>
+        <div class="line"></div>
+      </div>
+      <div class="body">
+        <p>We are used to expressing values as numbers in the <a href="https://en.wikipedia.org/wiki/Decimal" target="_blank"><mark>decimal number system</mark></a>, which can also be described as base-ten. However, there are as many bases as there are numbers to express values by, such as <a href="https://en.wikipedia.org/wiki/Binary_number" target="_blank"><mark>binary</mark></a> for computers or <a href="https://en.wikipedia.org/wiki/Hexadecimal" target="_blank"><mark>hexadecimal</mark></a> for colors.</p>
+        <p>In short, a base dictates both the range of numbers as well as the value of of each digit depending on it's position in the number. For example, base-ten has a range of ten numbers, from zero to nine. Additionally, the values of the digits vary depending if they are in the one's (10<sup>0</sup>), ten's (10<sup>1</sup>), or hundred's (10<sup>2</sup>) places just to name a few.</p>
+        <p>Essentially, each place in a base represents that base number to a power, starting with zero as the power on the right, and incrementing by one. This is true for any base number. For example, with base-two, the place values from right to left go one (2<sup>1</sup>), two (2<sup>1</sup>), four (2<sup>2</sup>), eight (2<sup>3</sup>), etc. Though this covers the basis, <a href="https://nrich.maths.org/1368" target="_blank"><mark>this</mark></a> is a great source to master this concept.</p>
+        <p>There is a tool to convert a decimal (base-ten) number to a different base. Below, you are able to select which bases you want to calculate. Once selected, you can enter a number and the selected bases will have a corresponding result displayed below the input. Only whole numbers are accepted (for now).</p>
+      </div>
+        <div class="toggle_containers_container">
+          <div class="toggle_container">
+            <input type="checkbox" class="base_toggle" id="base_two_toggle">
+            <span class="styled_toggle"></span>
+            <h5>Base Two</h5>
+          </div>
+          <div class="toggle_container">
+            <input type="checkbox" class="base_toggle" id="base_three_toggle">
+            <span class="styled_toggle"></span>
+            <h5>Base Three</h5>
+          </div>
+          <div class="toggle_container">
+            <input type="checkbox" class="base_toggle" id="base_four_toggle">
+            <span class="styled_toggle"></span>
+            <h5>Base Four</h5>
+          </div>
+          <div class="toggle_container">
+            <input type="checkbox" class="base_toggle" id="base_five_toggle">
+            <span class="styled_toggle"></span>
+            <h5>Base Five</h5>
+          </div>
+          <div class="toggle_container">
+            <input type="checkbox" class="base_toggle" id="base_six_toggle">
+            <span class="styled_toggle"></span>
+            <h5>Base Six</h5>
+          </div>
+          <div class="toggle_container">
+            <input type="checkbox" class="base_toggle" id="base_seven_toggle">
+            <span class="styled_toggle"></span>
+            <h5>Base Seven</h5>
+          </div>
+          <div class="toggle_container">
+            <input type="checkbox" class="base_toggle" id="base_eight_toggle">
+            <span class="styled_toggle"></span>
+            <h5>Base Eight</h5>
+          </div>
+          <div class="toggle_container">
+            <input type="checkbox" class="base_toggle" id="base_sixteen_toggle">
+            <span class="styled_toggle"></span>
+            <h5>Base Sixteen</h5>
+          </div>
+        </div>
+    </div>
+    <div class="box">
+      <div class="form">
+        <input type="button" value="Convert" id="convert_button">
+        <span class="styled_button"><strong>Go</strong></span>
+        <input type="text" id="userInput" name="fnumber">
+      </div>
+      <ul id="result_list">
+      </ul>
+      <div class="clear_container">
+        <input type="button" value="clear" id="clear_button">
+        <span class="styled_clear_button">Clear</span>
+      </div>
+    </div>
+    <footer>
+      <div class="copyright">
+        <h5>Copyright 2020</h5>
+      </div>
+      <ul>
+        <li><a href="title.html">Title</a></li>
+        <li><a href="square.html">Square</a></li>
+        <li><a href="boxes.html">Boxes</a></li>
+        <li><a href="lists.html">Lists</a></li>
+        <li><a href="options.html">Options</a></li>
+      </ul>
+    </footer>
+    <script src="resources/js/base_conversion_script.js" type="text/javascript"></script>
+    <div class="circle"></div>
+  </body>
+</html>

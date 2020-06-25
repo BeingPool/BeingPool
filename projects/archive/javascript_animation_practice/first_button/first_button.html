@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Button Design</title>
+    <link rel="stylesheet" href="first_button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div class="buttons_container">
+        <div class="simple_icon row_one column_one button_with_icon">
+          <i class="fa fa-heart"></i>
+        </div>
+        <div class="simple_icon row_one column_two button_with_icon">
+          <i class="fa fa-user-secret"></i>
+        </div>
+        <div class="simple_icon row_one column_three button_with_icon">
+          <i class="fa fa-star"></i>
+        </div>
+        <div class="simple_icon_pressed row_two column_one button_with_icon">
+          <i class="fa fa-heart"></i>
+        </div>
+        <div class="simple_icon_pressed row_two column_two button_with_icon">
+          <i class="fa fa-user-secret"></i>
+        </div>
+        <div class="simple_icon_pressed row_two column_three button_with_icon">
+          <i class="fa fa-star"></i>
+        </div>
+        <div class="border_icon_pressed row_three column_one button_with_icon">
+          <i class="fa fa-heart"></i>
+        </div>
+        <div class="border_icon_pressed row_three column_two button_with_icon">
+          <i class="fa fa-user-secret"></i>
+        </div>
+        <div class="border_icon_pressed row_three column_three button_with_icon">
+          <i class="fa fa-star"></i>
+        </div>
+        <div class="input_search row_four">
+          <input type="text" placeholder="search">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="input_password row_five">
+          <input type="password" placeholder="password">
+        </div>
+        <div class="input_three_choices row_six">
+          <div class="radio_container rone">
+            <input type="radio" name="radio_one">
+            <div class="styled_radio"></div>
+          </div>
+          <div class="radio_container rtwo">
+            <input type="radio" name="radio_one">
+            <div class="styled_radio"></div>
+          </div>
+          <div class="radio_container rthree">
+            <input type="radio" name="radio_one">
+            <div class="styled_radio"></div>
+          </div>
+        </div>
+        <div id="volume_control" class="volume_control column_four">
+          <meter id="volume_meter" value="50" min="0" max="100"></meter>
+          <div id="volume_slider" class="volume_slider">
+            <i class="fa fa-signal-slash"></i>
+          </div>
+        </div>
+        <div class="toggle_one toggle row_four">
+          <input type="checkbox">
+          <div class="toggle_slider"></div>
+        </div>
+        <div class="toggle_two toggle row_five">
+          <input type="checkbox">
+          <div class="toggle_slider"></div>
+        </div>
+        <div class="plus_minus row_six">
+          <div class="plus"><i class="fa fa-plus"></i></div>
+          <div class="minus"><i class="fa fa-minus"></i></div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="first_button.js">
+
+    </script>
+  </body>
+</html>

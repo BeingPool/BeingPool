@@ -1,0 +1,136 @@
+
+<section class="section_two">
+  <div class="small_box_one" id="small_box_one">
+
+  </div>
+  <div class="small_box_two" id="small_box_two">
+
+  </div>
+  <div class="small_box_three" id="small_box_three">
+
+  </div>
+  <div class="small_box_four" id="small_box_four">
+
+  </div>
+  <div class="small_box_five" id="small_box_five">
+
+  </div>
+  <div class="small_box_six" id="small_box_six">
+
+  </div>
+  <div class="wide_box" id="wide_box">
+
+  </div>
+  <div class="large_box_one" id="large_box_one">
+
+  </div>
+  <div class="large_box_two" id="large_box_two">
+
+  </div>
+  <div class="large_box_three" id="large_box_three">
+
+  </div>
+  <div class="division" id="division">
+
+  </div>
+  <div class="main_column" id="main_column">
+
+  </div>
+</section>
+
+/* SECTION TWO */
+.section_two {
+  display: grid;
+  grid-template-columns: 0px 4fr 4fr 4fr 1fr 8fr 0px;
+  grid-template-rows: 0px 250px 250px 300px 400px 0px;
+  gap: 25px;
+  margin: 0 50px 0 50px;
+}
+.small_box_one {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.small_box_two {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.small_box_three {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.small_box_four {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.small_box_five {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.small_box_six {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.wide_box {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.large_box_one {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.large_box_two {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.large_box_three {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.division {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 6;
+}
+.main_column {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 6;
+}
+/* END SECITON TWO */
+
+.section_two {
+  background-color: #0D0D0D;
+}
+.section_two div {
+  background-color: #E9F2F2;
+  background-size: cover;
+}
+.footer_two p {
+  font-weight: 600;
+  opacity: 0.9;
+}
+.small_box_one {
+  background-image: url(../media/small_box_one_image.jpg);
+}

@@ -1,0 +1,317 @@
+body {
+  margin: 0;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #A697FF;
+  margin: 0;
+}
+.button_with_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: #8490A4;
+}
+.buttons_container {
+  display: grid;
+  grid-template-columns: repeat(10, 65px);
+  grid-template-rows: repeat(6, 65px);
+  background-color: #E1E1E1;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.buttons_container div {
+  background-color: #E1E1E1;
+  margin: auto;
+}
+.input_search {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 50px;
+  width: 215px;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 8px #a4a4a4,
+              inset -4px -4px 8px #ffffff;
+  display: flex;
+  box-sizing: border-box;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  color: #8490A4;
+}
+.input_search input {
+  width: 140px;
+}
+input[type=text], input[type=password] {
+  background-color: transparent;
+  height: 30px;
+  border: none;
+  font-size: 15px;
+  margin-left: 20px;
+  font-weight: 600;
+  color: #8490A4;
+  font-family: ubuntu, sans-serif;
+}
+.input_password {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 50px;
+  width: 215px;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 8px #a4a4a4,
+              inset -4px -4px 8px #ffffff;
+  display: flex;
+  box-sizing: border-box;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  color: #8490A4;
+}
+.input_password input {
+  width: 170px;
+}
+.simple_icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  box-shadow: 6px 6px 20px #a4a4a4,
+             -6px -6px 20px #ffffff;
+}
+.simple_icon_pressed {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 8px #a4a4a4,
+              inset -4px -4px 8px #ffffff;
+}
+.border_icon_pressed {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 5px solid #E1E1E1;
+  box-shadow:  6px 6px 20px #a4a4a4,
+              -6px -6px 20px #ffffff,
+              inset 4px 4px 8px #a4a4a4,
+              inset -4px -4px 8px #ffffff;
+}
+.input_three_choices {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 65px;
+  width: 215px;
+  box-shadow:  6px 6px 20px #a4a4a4,
+             -6px -6px 20px #ffffff;
+  border-radius: 20px;
+}
+.rone {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.rtwo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.rthree {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.radio_container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radio_container * {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+input[name=radio_one] {
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.styled_radio {
+  position: absolute;
+  z-index: 1;
+  box-sizing: border-box;
+  border: 5px solid #E1E1E1;
+}
+input[name=radio_one]:focus:checked ~ .styled_radio {
+  box-shadow: inset 4px 4px 8px #a4a4a4,
+              inset -4px -4px 8px #ffffff;
+}
+input[name=radio_one]:active ~ .styled_radio {
+  box-shadow: inset 6px 6px 8px #a4a4a4,
+              inset -6px -6px 8px #ffffff;
+}
+.volume_control {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 215px;
+  width: 50px;
+}
+.volume_control meter {
+  background: none;
+  margin: auto;
+  width: 35px;
+  height: 200px;
+  -moz-orient: vertical;
+  border-radius: 45px;
+  box-shadow: inset 4px 4px 8px #a4a4a4,
+              inset -4px -4px 8px #ffffff;
+}
+meter::-moz-meter-bar {
+  background: none;
+}
+.volume_slider {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  bottom: 82.5px;
+  border-radius: 50px;
+  box-shadow: 4px 4px 10px #a4a4a4,
+             -4px -4px 10px #ffffff;
+  cursor: pointer;
+}
+.toggle {
+  width: 110px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 8px #a4a4a4,
+              inset -4px -4px 8px #ffffff;
+  position: relative;
+  box-sizing: border-box;
+}
+.toggle_slider {
+  height: 55px;
+  width: 55px;
+  border-radius: 55px;
+  position: absolute;
+  box-shadow: 6px 6px 20px #a4a4a4,
+             -6px -6px 20px #ffffff;
+  bottom: -2.5px;
+  left: 0;
+  transition: left 0.1s ease-in-out 0s;
+}
+.toggle input {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  opacity: 0;
+}
+.toggle_one {
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+.toggle_two {
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+.toggle input:checked ~ .toggle_slider {
+  left: 60px;
+}
+.plus_minus {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  height: 65px;
+  width: 110px;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+
+
+
+
+
+
+.row_one {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.row_two {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.row_three {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.row_four {
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.row_five {
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.row_six {
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+.row_seven {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.column_one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.column_two {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.column_three {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.column_four {
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+.column_five {
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+.column_six {
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+.column_seven {
+    grid-column-start: 7;
+    grid-column-end: 8;
+}
+.column_eight {
+    grid-column-start: 8;
+    grid-column-end: 9;
+}
+.column_nine {
+    grid-column-start: 9;
+    grid-column-end: 10;
+}
+.column_ten {
+    grid-column-start: 10;
+    grid-column-end: 11;
+}
