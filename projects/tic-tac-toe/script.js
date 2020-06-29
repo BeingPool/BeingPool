@@ -71,7 +71,7 @@ const gameplay = (() => {
     document.getElementById('oneScore').innerHTML = playerOne.score;
     document.getElementById('twoScore').innerHTML = playerTwo.score;
     const x = document.getElementById('htmlBoard');
-    clearBoard(x);
+    refresh();
     turn = 'x';
   }
   const commitPlay = function() {
