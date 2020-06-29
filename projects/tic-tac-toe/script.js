@@ -32,7 +32,6 @@ const gameplay = (() => {
       Object.keys(board).forEach(function(key) {
         if (board[key]) {
           x += 1;
-          console.log(x)
         }
       })
       if (board[array[0]] === 'x' && board[array[1]] === 'x' && board[array[2]] === 'x') {
