@@ -4,7 +4,7 @@ const Player = function(name, symbol, score) {
 let playerOne = new Player(document.getElementById('oneName').value, 'x', 0);
 let playerTwo = new Player(document.getElementById('twoName').value, 'o', 0);
 const gameplay = (() => {
-  let turn = 1;
+  let turn = 'x';
   const board = {
     1: '',
     2: '',
@@ -27,46 +27,30 @@ const gameplay = (() => {
       [1, 5, 9],
       [7, 5, 3],
     ];
-    let winner;
     winCombinations.forEach(function(array) {
+      let x = 0;
+      Object.keys(board).forEach(function(key) {
+        if (board[key]) {
+          x += 1;
+          console.log(x)
+        }
+      })
       if (board[array[0]] === 'x' && board[array[1]] === 'x' && board[array[2]] === 'x') {
-        if (playerOne.name) {
-          winner = playerOne.name;
-        } else {
-          winner = 'player one';
-        }
-        if (winner) {
-          displayWinner(winner);
-        }
+        displayWinner(playerOne.name ? playerOne.name : 'Player One');
         playerOne.score += 1;
         document.getElementById('oneScore').innerHTML = playerOne.score;
       } else if (board[array[0]] === 'o' && board[array[1]] === 'o' && board[array[2]] === 'o') {
-        if (playerTwo.name) {
-          winner = playerTwo.name;
-        } else {
-          winner = 'player two';
-        }
-        if (winner) {
-          displayWinner(winner);
-        }
+        displayWinner(playerOne.name ? playerTwo.name : 'Player Two');
         playerTwo.score += 1;
         document.getElementById('twoScore').innerHTML = playerTwo.score;
-        playerTwo.score += 1;
-      } else if (board['1'] && board['2'] && board['3'] && board['4'] && board['5'] && board['6'] && board['7'] && board['8'] && board['9']) {
-        winner = 'tie';
-        if (winner) {
-          displayWinner(winner);
-        }
-      }
+      } else if (x === 9) {
+        displayWinner(false);
+      };
     })
   }
   const displayWinner = function(winner) {
     const x = document.getElementById('winMessage');
-    if (winner === 'tie') {
-      x.innerHTML = 'TIE!';
-    } else {
-      x.innerHTML = `${winner} is the winner!`;
-    }
+    x.innerHTML = winner ? `${winner} is the winner!` : 'TIE!';
     x.style.display = 'flex';
     x.addEventListener('click', refresh);
   }
@@ -79,6 +63,7 @@ const gameplay = (() => {
       board[i] = '';
     };
     document.getElementById('winMessage').style.display = 'none';
+    turn = 'x';
     render();
   }
   const restart = function() {
@@ -88,20 +73,22 @@ const gameplay = (() => {
     document.getElementById('twoScore').innerHTML = playerTwo.score;
     const x = document.getElementById('htmlBoard');
     clearBoard(x);
+    turn = 'x';
   }
   const commitPlay = function() {
     if (!(board[event.target.id])) {
-      if (turn % 2 === 0) {
+      if (turn === 'x') {
         event.target.className = 'x';
         event.target.style.cursor = 'not-allowed';
         board[event.target.id] = 'x';
+        turn = 'o';
       } else {
         event.target.className = 'o';
         event.target.style.cursor = 'not-allowed';
         board[event.target.id] = 'o';
+        turn = 'x';
       }
       checkWinner();
-      turn += 1;
     }
   }
   const render = function() {
@@ -112,7 +99,7 @@ const gameplay = (() => {
       tile.addEventListener('click', commitPlay);
     }
   }
-  return {render, restart, refresh};
+  return {board, render, restart, refresh};
 })();
 
 document.getElementById('clearBoard').addEventListener('click', gameplay.refresh);
