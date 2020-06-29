@@ -3,6 +3,10 @@ const Player = function(name, symbol, score) {
 }
 let playerOne = new Player(document.getElementById('oneName').value, 'x', 0);
 let playerTwo = new Player(document.getElementById('twoName').value, 'o', 0);
+const updateNames = function() {
+  playerOne.name = document.getElementById('oneName').value;
+  playerTwo.name = document.getElementById('twoName').value;
+}
 const gameplay = (() => {
   let turn = 'x';
   const board = {
@@ -39,7 +43,7 @@ const gameplay = (() => {
         playerOne.score += 1;
         document.getElementById('oneScore').innerHTML = playerOne.score;
       } else if (board[array[0]] === 'o' && board[array[1]] === 'o' && board[array[2]] === 'o') {
-        displayWinner(playerOne.name ? playerTwo.name : 'Player Two');
+        displayWinner(playerTwo.name ? playerTwo.name : 'Player Two');
         playerTwo.score += 1;
         document.getElementById('twoScore').innerHTML = playerTwo.score;
       } else if (x === 9) {
@@ -54,6 +58,7 @@ const gameplay = (() => {
     x.addEventListener('click', refresh);
   }
   const refresh = function() {
+    updateNames();
     const x = document.getElementById('htmlBoard');
     while (x.firstChild) {
       x.removeChild(x.lastChild)
